@@ -46,10 +46,12 @@
     };
     await load('header.html', '.site-header', 'afterbegin');
     await load('footer.html', '.site-footer', 'beforeend');
-    const loader = document.createElement('script');
-    loader.src = `${root}components/loader.js`;
-    loader.defer = true;
-    document.head.appendChild(loader);
+    if (!document.querySelector('script[src*="components/loader.js"]')) {
+      const loader = document.createElement('script');
+      loader.src = `${root}components/loader.js`;
+      loader.defer = true;
+      document.head.appendChild(loader);
+    }
   };
   const start = async () => {
     if (!document.body.dataset.sharedReady) {
