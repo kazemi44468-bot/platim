@@ -53,7 +53,16 @@
       document.head.appendChild(loader);
     }
   };
+  const loadPolish = () => {
+    if (document.querySelector('link[data-platim-polish]')) return;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${root}assets/css/platim-polish.css`;
+    link.dataset.platimPolish = 'true';
+    document.head.appendChild(link);
+  };
   const start = async () => {
+    loadPolish();
     if (!document.body.dataset.sharedReady) {
       document.body.dataset.sharedReady = 'true';
       await loadShared();
