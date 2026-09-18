@@ -13,25 +13,16 @@
 platim/
 ├── index.html
 ├── 404.html
-├── products/
-├── authenticity/
-├── origin/
-├── quality/
-├── shop/
-├── wholesale/
-├── export/
-├── journal/
-├── about/
-├── contact/
+├── pages/
+│   ├── about.html
+│   ├── products.html
+│   ├── shop.html
+│   └── contact.html
 ├── assets/
-│   ├── css/
-│   ├── js/
-│   ├── images/logo/
-│   ├── icons/
-│   ├── videos/
+│   ├── css/site.css
+│   ├── js/app.js
+│   ├── images/logo/logo.png
 │   └── fonts/
-├── components/
-├── data/
 ├── robots.txt
 └── sitemap.xml
 ```
